@@ -4,9 +4,10 @@ import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
-import { CitiesModule } from './cities/cities.module';
 import { UsersModule } from './modules/Users/users.module';
 import { ExampleModule } from './modules/example';
+import { CategoryModule } from './modules/Category/category.module';
+import { CitiesModule } from './cities/cities.module';
 
 @Module({
     imports: [
@@ -29,6 +30,7 @@ import { ExampleModule } from './modules/example';
         CitiesModule,
         UsersModule,
         ExampleModule,
+        CategoryModule,
     ],
     controllers: [AppController],
     providers: [AppService],
