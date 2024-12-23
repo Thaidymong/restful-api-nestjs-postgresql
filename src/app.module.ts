@@ -7,8 +7,11 @@ import { join } from 'path';
 import { UsersModule } from './modules/Users/users.module';
 import { ExampleModule } from './modules/example';
 import { CategoryModule } from './modules/Category/category.module';
-import { CitiesModule } from './cities/cities.module';
 import { ProductModule } from './modules/Products/product.module';
+import { BusinessDirectoryCategoryModule } from './modules/BusinessDirectoryCategory/business-directory-category.module';
+import { CitiesModule } from './modules/cities/cities.module';
+import { UserAttendeeModule } from './modules/UserAttendees/user-attendee.module';
+import { ShiftModule } from './modules/UserAttendees/shift.module';
 
 @Module({
     imports: [
@@ -33,6 +36,9 @@ import { ProductModule } from './modules/Products/product.module';
         ExampleModule,
         CategoryModule,
         ProductModule,
+        BusinessDirectoryCategoryModule,
+        UserAttendeeModule,
+        ShiftModule,
     ],
     controllers: [AppController],
     providers: [AppService],

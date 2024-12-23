@@ -15,7 +15,7 @@ function setGlobalSettings(app) {
 }
 
 async function startServer(app) {
-    const port = process.env.PORT || 8080;
+    const port = process.env.PORT || 8088;
     await app.listen(port);
     console.log(`Application is running on: http://localhost:${port}`);
 }
