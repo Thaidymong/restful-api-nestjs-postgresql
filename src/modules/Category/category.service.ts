@@ -52,4 +52,14 @@ export class CategoryService {
 
         await this.categoryRepository.remove(category);
     }
+
+    async getCategoryById(id: number): Promise<CategoryEntity> {
+        const category = await this.categoryRepository.findOne({
+            where: { id },
+        });
+        if (!category) {
+            throw new NotFoundException(`Category with ID ${id} not found`);
+        }
+        return category;
+    }
 }

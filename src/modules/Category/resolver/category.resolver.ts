@@ -41,4 +41,11 @@ export class CategoryController {
     async removeProduct(@Param('id', ParseIntPipe) id: number): Promise<void> {
         return this.categoryService.remove(id);
     }
+
+    @Get(':id')
+    async getCategoryById(
+        @Param('id', ParseIntPipe) id: number,
+    ): Promise<CategoryEntity> {
+        return this.categoryService.getCategoryById(id);
+    }
 }
